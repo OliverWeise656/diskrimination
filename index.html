@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hörtest</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2em;
+      font-weight: 600;
+    }
+
+    #testArea, #resultArea {
+      margin-top: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    button {
+      margin: 10px 0;
+      padding: 10px 20px;
+      font-size: 1em;
+      font-weight: 600;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button#startButton {
+      background: #007bff;
+      color: white;
+    }
+
+    button#sameButton {
+      background: #28a745;
+      color: white;
+    }
+
+    button#differentButton {
+      background: #dc3545;
+      color: white;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    button#sameButton:hover {
+      background: #218838;
+    }
+
+    button#differentButton:hover {
+      background: #c82333;
+    }
+
+    input[type="text"] {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    p {
+      margin: 10px 0;
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hörtest zur Lautunterscheidung und -identifizierung</h1>
+  <p>Hören Sie das Lautpaar und entscheiden Sie, ob die Laute gleich oder ungleich sind.</p><p>Nach diesen beiden Tests erwartet Sie noch 1 Test.<p>
+  <button id="startButton">Start</button>
+  <div id="testArea" style="display:none;">
+    
+    <button id="sameButton">Gleich</button>
+    <button id="differentButton">Ungleich</button>
+  </div>
+  <div id="resultArea" style="display:none;">
+    <h2>Ergebnisse</h2>
+    <p id="resultText"></p>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
